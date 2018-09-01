@@ -18,6 +18,7 @@
     </bean>
     <!-- 引用dubbo服务 -->
     <dubbo:application name="taotao-manager-web"/>
-    <dubbo:registry protocol="zookeeper" address="192.168.244.11:2181"/>
+    <dubbo:registry protocol="zookeeper" address="118.126.110.120:2181"/>
     <!--<dubbo:reference interface="com.taotao.service.TestService" id="testService" />-->
+    <dubbo:reference interface="cn.blankspace.taotao.service.TestService" id="testService"></dubbo:reference>
 </beans>
