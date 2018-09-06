@@ -11,6 +11,8 @@
 
     <context:component-scan base-package="cn.blankspace.taotao.controller" />
     <mvc:annotation-driven />
+    <mvc:resources location="/WEB-INF/js/" mapping="/js/**"/>
+    <mvc:resources location="/WEB-INF/css/" mapping="/css/**"/>
     <bean
             class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/" />
@@ -21,4 +23,6 @@
     <dubbo:registry protocol="zookeeper" address="118.126.110.120:2181"/>
     <!--<dubbo:reference interface="com.taotao.service.TestService" id="testService" />-->
     <dubbo:reference interface="cn.blankspace.taotao.service.TestService" id="testService"></dubbo:reference>
+
+    <dubbo:service interface="cn.blankspace.taotao.service.ItemService" id="itemService" timeout="3000"></dubbo:service>
 </beans>

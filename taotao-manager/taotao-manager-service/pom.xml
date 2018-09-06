@@ -80,6 +80,15 @@
 				<artifactId>spring-context-support</artifactId>
 			</dependency>
 
+	  		<dependency>
+				  <groupId>com.github.pagehelper</groupId>
+				<artifactId>pagehelper</artifactId>
+				 <version>${pagehelper.version}</version>
+	 		 </dependency>
+      		<dependency>
+        		  <groupId>junit</groupId>
+         		 <artifactId>junit</artifactId>
+     		 </dependency>
 
 
   </dependencies>

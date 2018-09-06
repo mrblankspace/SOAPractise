@@ -45,6 +45,8 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-jms:4.2.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-messaging:4.2.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context-support:4.2.4.RELEASE" />
+          <element id="library" level="project" name="Maven: com.github.pagehelper:pagehelper:5.1.4" />
+          <element id="library" level="project" name="Maven: com.github.jsqlparser:jsqlparser:1.0" />
           <element id="archive" name="taotao-common-0.0.1-SNAPSHOT.jar">
             <element id="module-output" name="taotao-common" />
           </element>
