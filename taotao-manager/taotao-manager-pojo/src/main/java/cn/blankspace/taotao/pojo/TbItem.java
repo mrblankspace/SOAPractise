@@ -1,8 +1,13 @@
 package cn.blankspace.taotao.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class TbItem {
+/**
+ * 商品实体类   因为分离部署   要从service传输到controller
+ * 必须实现 Serializable
+ */
+public class TbItem implements Serializable {
     private Long id;
 
     private String title;
