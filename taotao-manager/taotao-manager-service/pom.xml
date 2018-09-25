@@ -35,7 +35,6 @@
 		  <artifactId>zkclient</artifactId>
 	  </dependency>
 
-
   			<dependency>
   				<groupId>cn.blankspace</groupId>
   				<artifactId>taotao-manager-interface</artifactId>
@@ -47,8 +46,6 @@
   				<artifactId>taotao-manager-dao</artifactId>
   				<version>0.0.1-SNAPSHOT</version>
   			</dependency>
-
-
 
   	<!-- Spring -->
 			<dependency>
@@ -83,14 +80,24 @@
 	  		<dependency>
 				  <groupId>com.github.pagehelper</groupId>
 				<artifactId>pagehelper</artifactId>
-				 <version>${pagehelper.version}</version>
 	 		 </dependency>
       		<dependency>
         		  <groupId>junit</groupId>
          		 <artifactId>junit</artifactId>
      		 </dependency>
-
-
+	  <dependency>
+		  <groupId>org.mybatis</groupId>
+		  <artifactId>mybatis</artifactId>
+	  </dependency>
+	  <dependency>
+		  <groupId>org.mybatis</groupId>
+		  <artifactId>mybatis-spring</artifactId>
+	  </dependency>
+	  <dependency>
+		  <groupId>com.github.pagehelper</groupId>
+		  <artifactId>pagehelper</artifactId>
+		  <version>${pagehelper.version}</version>
+	  </dependency>
   </dependencies>
   
   

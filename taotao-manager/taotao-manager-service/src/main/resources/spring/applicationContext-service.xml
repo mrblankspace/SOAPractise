@@ -22,4 +22,6 @@
     <dubbo:service interface="cn.blankspace.taotao.service.TestService" ref="testServiceImpl"></dubbo:service>
 
     <dubbo:service interface="cn.blankspace.taotao.service.ItemService" ref="itemServiceImpl"></dubbo:service>
+
+    <dubbo:service interface="cn.blankspace.taotao.service.ItemCatService" ref="itemCatServiceImpl"></dubbo:service>
 </beans>

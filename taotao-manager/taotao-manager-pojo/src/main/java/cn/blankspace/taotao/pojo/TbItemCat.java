@@ -1,15 +1,16 @@
 package cn.blankspace.taotao.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class TbItemCat {
+public class TbItemCat implements Serializable {
     private Long id;
 
-    private Long parentId;
+    private Long parentId;   //父类id   为0时代表的是1级
 
     private String name;
 
-    private Integer status;
+    private Integer status;  //是否为父类id
 
     private Integer sortOrder;
 

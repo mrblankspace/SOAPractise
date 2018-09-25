@@ -5,6 +5,7 @@ import cn.blankspace.taotao.pojo.EasyUIDataGridResult;
 import cn.blankspace.taotao.pojo.TbItem;
 import cn.blankspace.taotao.pojo.TbItemExample;
 import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,9 +21,10 @@ public class ItemServiceImpl implements  ItemService{
         PageHelper.startPage(page,rows);
         TbItemExample tbItemExample = new TbItemExample();
         List<TbItem> tbItems = tbItemMapper.selectByExample(tbItemExample);
+        PageInfo<TbItem> pageInfo = new PageInfo<>(tbItems);
         EasyUIDataGridResult result = new EasyUIDataGridResult();
         result.setRows(tbItems);
-        result.setTotal(rows);
+        result.setTotal((int)pageInfo.getTotal());
         return result;
     }
 }
