@@ -18,6 +18,13 @@
         <property name="prefix" value="/WEB-INF/jsp/" />
         <property name="suffix" value=".jsp" />
     </bean>
+
+    <!-- 定义文件上传解析器 -->
+    <bean id = "multipartResolver" class="cn.blankspace.taotao.pojo.MyCommsMultipartResolver">
+        <property name="defaultEncoding" value="UTF-8"></property>
+        <property name="maxUploadSize" value="5242880"></property>
+    </bean>
+
     <!-- 引用dubbo服务 -->
     <dubbo:application name="taotao-manager-web"/>
     <dubbo:registry protocol="zookeeper" address="118.126.110.120:2181"/>
@@ -27,4 +34,8 @@
     <dubbo:reference interface="cn.blankspace.taotao.service.ItemService" id="itemService" timeout="3000"></dubbo:reference>
 
     <dubbo:reference interface="cn.blankspace.taotao.service.ItemCatService" id="itemCatService" timeout="3000"></dubbo:reference>
+
+    <dubbo:reference interface="cn.blankspace.taotao.service.PictureService" id="pictureService" timeout="3000"></dubbo:reference>
+
+    <dubbo:reference interface="cn.blankspace.taotao.content.service.ContentCategoryService" id="contentCategoryService" timeout="3000"></dubbo:reference>
 </beans>

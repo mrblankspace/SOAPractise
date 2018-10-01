@@ -17,10 +17,19 @@
   </modules>
   <dependencies>
   	<dependency>
-  		<groupId>cn.blankspace</groupId>
+		<groupId>cn.blankspace</groupId>
 		<artifactId>taotao-common</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
   	</dependency>
+      <dependency>
+	  <groupId>commons-fileupload</groupId>
+	  <artifactId>commons-fileupload</artifactId>
+  </dependency>
+	  <dependency>
+		  <groupId>commons-net</groupId>
+		  <artifactId>commons-net</artifactId>
+		  <version>${commons-net.version}</version>
+	  </dependency>
   </dependencies>
   
   <build>

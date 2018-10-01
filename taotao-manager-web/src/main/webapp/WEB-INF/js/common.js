@@ -66,7 +66,7 @@ var TT = TAOTAO = {
     initPicUpload : function(data){
     	$(".picFileUpload").each(function(i,e){
     		var _ele = $(e);
-    		_ele.siblings("div.pics").remove();
+    		_ele.siblings("div.pics").remove();   //找到后并且去掉
     		_ele.after('<div class="pics"><ul></ul></div>');
     		
         	//给“上传图片按钮”绑定click事件
