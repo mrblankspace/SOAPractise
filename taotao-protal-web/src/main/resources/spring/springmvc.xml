@@ -10,10 +10,14 @@
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
 
     <context:component-scan base-package="cn.blankspace.taotao.controller" />
+    <context:property-placeholder location="classpath:properties/*.properties"></context:property-placeholder>
     <mvc:annotation-driven />
     <bean
             class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/" />
         <property name="suffix" value=".jsp" />
     </bean>
+    <dubbo:application name="taotao-protal-web"></dubbo:application>
+    <dubbo:registry protocol="zookeeper" address="118.126.110.120:2181"/>
+    <dubbo:reference interface="cn.blankspace.taotao.content.service.ContentService" id="contentService" timeout="3000"></dubbo:reference>
 </beans>

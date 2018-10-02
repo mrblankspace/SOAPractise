@@ -46,4 +46,12 @@ public class ContentServiceImpl implements ContentService {
         contentMapper.insertSelective(content);
         return TaotaoResult.ok();
     }
+
+    @Override
+    public List<TbContent> getContentListByCatId(Long categoryId) {
+        TbContentExample example = new TbContentExample();
+        example.createCriteria().andCategoryIdEqualTo(categoryId);
+        List<TbContent> list = contentMapper.selectByExample(example);
+        return list;
+    }
 }

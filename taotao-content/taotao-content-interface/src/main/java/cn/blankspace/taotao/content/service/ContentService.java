@@ -4,6 +4,8 @@ import cn.blankspace.taotao.pojo.EasyUIDataGridResult;
 import cn.blankspace.taotao.pojo.TbContent;
 import cn.blankspace.util.TaotaoResult;
 
+import java.util.List;
+
 /**
  * 内容服务
  */
@@ -18,4 +20,7 @@ public interface ContentService {
     public EasyUIDataGridResult getContentList(Long categoryId, int page, int rows);
 
     public TaotaoResult saveContent(TbContent content);
+
+    public List<TbContent> getContentListByCatId(Long categoryId);
 }
+
