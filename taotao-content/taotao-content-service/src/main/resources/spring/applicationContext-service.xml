@@ -31,4 +31,6 @@
     <dubbo:service interface="PictureService" ref="pictureServiceImpl"></dubbo:service>-->
 
     <dubbo:service interface="cn.blankspace.taotao.content.service.ContentCategoryService" timeout="3000" ref="contentCategoryServiceImpl"></dubbo:service>
+
+    <dubbo:service interface="cn.blankspace.taotao.content.service.ContentService" ref="contentServiceImpl" timeout="3000"></dubbo:service>
 </beans>
