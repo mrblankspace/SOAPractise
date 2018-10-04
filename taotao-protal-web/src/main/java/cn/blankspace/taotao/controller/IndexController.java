@@ -23,7 +23,7 @@ public class IndexController {
     private ContentService contentService;
 
     @Value("${AD1_CATEGORY_ID}")
-    private  Long categoryId;
+    private  Long AD1_CATEGORY_ID;
 
     @Value("${AD1_HEIGHT_B}")
     private String AD1_HEIGHT_B;
@@ -40,7 +40,7 @@ public class IndexController {
     @RequestMapping("/index")
     public String showIndex(Model model){
         //根据内容分类的id, 查找内容列表
-        List<TbContent> contentList = contentService.getContentListByCatId(categoryId);
+        List<TbContent> contentList = contentService.getContentListByCatId(AD1_CATEGORY_ID);
         List<Ad1Node> nodes = new ArrayList<>();
         for (TbContent tbContent : contentList) {
             Ad1Node node = new Ad1Node();
