@@ -19,5 +19,5 @@
     </bean>
     <dubbo:application name="taotao-search-web"></dubbo:application>
     <dubbo:registry protocol="zookeeper" address="118.126.110.120:2181"/>
-    <!--<dubbo:reference interface="cn.blankspace.taotao.content.service" id="contentService" timeout="3000"></dubbo:reference>-->
+    <dubbo:reference interface="cn.blankspace.search.service.SearchService" id="searchService" timeout="3000"></dubbo:reference>
 </beans>

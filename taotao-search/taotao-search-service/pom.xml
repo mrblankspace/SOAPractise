@@ -12,6 +12,11 @@
     <packaging>war</packaging>
 
     <dependencies>
+        <!-- solr客户端 -->
+        <dependency>
+            <groupId>org.apache.solr</groupId>
+            <artifactId>solr-solrj</artifactId>
+        </dependency>
         <dependency>
             <groupId>cn.blankspace</groupId>
             <artifactId>taotao-search-interface</artifactId>
@@ -98,4 +103,29 @@
             <version>${pagehelper.version}</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <!-- 如果不配置mybatis的配置文件会漏掉 -->
+        <!-- 注意：配置了此方式，原来的默认的资源拷贝行为将无效 -->
+        <!-- 拷贝资源 -->
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+            <!-- 如果没有此节点，src/main/resources目录下的配置文件将被忽略 -->
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
+    </build>
 </project>
